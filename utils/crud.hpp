@@ -20,6 +20,17 @@ void addProduct(vector<Product>& products, int& nextId) {
     // 3. Ask for the product's name. Use `cin.getline(newProduct.name, 50)` to read it.
     // 4. Ask for quantity and price.
     // 5. Add the new product to the 'products' vector.
+    Product newProduct;
+    newProduct.id = nextId++;
+    cout << "Enter product name: ";
+    cin.ignore();
+    getline(cin, newProduct.name);
+    cout << "Enter product quantity: ";
+    cin >> newProduct.quantity;
+    cout << "Enter product price: ";
+    cin >> newProduct.price;
+    products.push_back(newProduct);
+
     cout << "addProduct function is not implemented yet." << endl;
 }
 
